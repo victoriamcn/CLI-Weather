@@ -10,10 +10,11 @@ Simple shell script that gets the weather for a particular zip code.
 - [License](#license)
 - [Credits](#credits)
 - [Badges](#badges)
+- 
 
 ## License
 
-![GitHub License Badge](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub License Badge](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)
 
 This project is licensed under MIT. [Read more.](https://github.com/victoriamcn/CLI-Weather/blob/main/LICENSE)
 
@@ -30,7 +31,13 @@ DEMO TBD
 
 ## Sources
 
-![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)
+### RapidAPI
+
+[tomorrow.io](https://www.tomorrow.io/a/faq/weather-api/can-i-get-weather-data-by-zip-code-using-an-api/)
+
+[US Weather by Zip Code](https://rapidapi.com/interzoid/api/us-weather-by-zip-code)
+
+<!-- ![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)
 
 ![FreeCodeCamp](https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green)
 
@@ -42,7 +49,7 @@ DEMO TBD
 
 ![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)
 
-![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
+![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white) -->
 
 ## Badges
 
