@@ -18,25 +18,65 @@ Simple shell script that gets the weather for a particular zip code.
 
 ## Installation and Usage
 
-1. Clone this repository to your local computer.
-2. Open the repo and the terminal within your preferred `IDE/Editor`. I prefer `VSCode`.
-3. Type `npm i` in the open terminal's command line.
-4. Register with [`tomorrow.io`](https://app.tomorrow.io/signin?_gl=1*dxtskt*_ga*MTkxNDc5Mzk2LjE3MDY1NzY4NTY.*_ga_FYZPGBJRTX*MTcwNjU4MjkzNC4yLjEuMTcwNjU4Mjk0Mi4wLjAuMA..&return_to=%2Fdevelopment%2Fkeys) to get your private `API key.`
-5. Create a `.env` file with the following variable:
+*Note: This app works for US Zip Codes only*
+
+1. **Clone this repository to your local computer.**
+2. **Open the repository and the terminal within your preferred `IDE/Editor`.**
+    Examples: `VSCode`, `Notepad`, `Atom`, `Brackets`, `Eclipse`
+3. **Install Dependencies**
+    Type `npm i` in the open terminal's command line.
+4. **API Key Set Up** 
+   - Register with [`tomorrow.io`](https://app.tomorrow.io/signin?_gl=1*dxtskt*_ga*MTkxNDc5Mzk2LjE3MDY1NzY4NTY.*_ga_FYZPGBJRTX*MTcwNjU4MjkzNC4yLjEuMTcwNjU4Mjk0Mi4wLjAuMA..&return_to=%2Fdevelopment%2Fkeys) to get your private `API key.`
+    - Create a `.env` file with the following variable:
     ```
     TOMORROW_IO_API_KEY = 'YOUR_KEY_HERE'
     ```
-6. Make the script executable on your local computer. In the command line type the following in the open terminal's command line:
+5. **Make the Script Executable**
+    Type the following in the open terminal to make the script executable within the current repository:
     ```
-    chmod +x get_weather.sh
+    chmod +x generate_weather.sh
     ```
     Command Breakdown:
         - `chmod`: This command stands for "change mode," and it is used to change the permissions of a file.
         - `+x`: In Unix-like operating systems, the execute permission is represented by the letter `x`. Adding the `+x`option means granting the execute permission.
-        - `get_weather.sh`: This is the name of the file for which you want to change the permissions. In this case, it's assumed to be a shell script named `get_weather.sh`.
-## Demo
+        - `generate_weather.sh`: This is the name of the file for which you want to change the permissions. In this case, it's assumed to be a shell script (`.sh`) file named `generate_weather`.
 
-DEMO TBD
+6. **Execute the Script**
+    Execute the script directly from the command line with
+    ```
+    ./generate_weather.sh --zipcode 29601
+
+    ```
+---
+### ***OPTIONAL SET-UP***
+7. **Make Custom Shell Script Accessible from Any Location**
+    Move the script to a directory in your system's `PATH`:
+    ```
+    sudo mv generate_weather.sh /usr/local/bin/generate_weather
+    ```
+    - This assumes that `/usr/local/bin`` is in your PATH. You can adjust the destination based on your preference.
+    - Skip Step 6 if you start getting a headache.
+8. **Create an Alias for Custom Shell Script**
+    - Open your shell configuration file in a text editor. (e.g., `~/.bashrc` for Bash, `~/.zshrc` for Zsh)
+    - Add the following line at the end of the file:
+        ```
+        alias weather="/path/to/your/generate_weather.sh"
+        ```
+        - If you did `Step 6` and moved the script to a directory in your PATH, you can simply use the script name and then save the file.
+            ```
+            alias weather="generate_weather"
+            ```
+        - After making changes to your shell configuration file, you need to either restart your terminal or run the following command to apply the changes:
+            ```
+            source ~/.bashrc   # For Bash
+            ```
+            ```
+            source ~/.zshrc   # For Zsh
+            ```
+    - Test the Alias by typing the following in the terminal:
+        ```
+        weather --zipcode 29601
+        ```
 
 ## Credits
 

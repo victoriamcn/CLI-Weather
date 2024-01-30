@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Load environment variables from .env file
-dotenv_path=".env"
+if [ -f ".env" ]; then
+    source ".env"
+fi
 
 # Check if the API key is set
 if [ -z "$TOMORROW_IO_API_KEY" ]; then
