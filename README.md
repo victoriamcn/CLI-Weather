@@ -25,7 +25,7 @@ Simple shell script that gets the weather for a particular zip code.
     Examples: `VSCode`, `Notepad`, `Atom`, `Brackets`, `Eclipse`
 3. **Install Dependencies**
     Type `npm i` in the open terminal's command line.
-    Install the git [`./jq`](https://jqlang.github.io/jq/) on your device.
+    Install [`./jq`](https://jqlang.github.io/jq/) on your device.
 4. **API Key Set Up** 
    - Register with [`tomorrow.io`](https://app.tomorrow.io/signin?_gl=1*dxtskt*_ga*MTkxNDc5Mzk2LjE3MDY1NzY4NTY.*_ga_FYZPGBJRTX*MTcwNjU4MjkzNC4yLjEuMTcwNjU4Mjk0Mi4wLjAuMA..&return_to=%2Fdevelopment%2Fkeys) to get your private `API key.`
     - Create a `.env` file with the following variable:
