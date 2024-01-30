@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Load environment variables from .env file
+dotenv_path=".env"
+
+# Check if the API key is set
+if [ -z "$TOMORROW_IO_API_KEY" ]; then
+    echo "Error: TOMORROW_IO_API_KEY environment variable is not set."
+    exit 1
+fi
+
 while [[ $# -gt 0 ]]; do
     key="$1"
 
@@ -21,7 +30,7 @@ if [ -z "$ZIPCODE" ]; then
     exit 1
 fi
 
-myUrl="https://api.tomorrow.io/v4/weather/realtime?location=${ZIPCODE}&units=imperial&apikey=stq6JSuxCBwvp3u2OVqVXFuQgLTqa8ff"
+myUrl="https://api.tomorrow.io/v4/weather/realtime?location=${ZIPCODE}&units=imperial&apikey=$TOMORROW_IO_API_KEY"
 
 # Fetching and parsing the data
 weatherData=$(curl --compressed --request GET --url "$myUrl" --header 'accept: application/json' | jq -r '.')
@@ -31,3 +40,6 @@ temperature=$(echo "$weatherData" | jq -r '.temperature')
 humidity=$(echo "$weatherData" | jq -r '.humidity')
 weatherCode=$(echo "$weatherData" | jq -r '.weatherCode[0]')
 windSpeed=$(echo "$weatherData" | jq -r '.windSpeed')
+
+# Outputting the information
+echo "At the moment, the temperature for $ZIPCODE is ${temperature}°F with ${humidity}% humidity and wind speeds around ${windSpeed}mph. You can expect ${weatherCode} skies."

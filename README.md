@@ -14,16 +14,18 @@ Simple shell script that gets the weather for a particular zip code.
 
 ## License
 
-![GitHub License Badge](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)
-
-This project is licensed under MIT. [Read more.](https://github.com/victoriamcn/CLI-Weather/blob/main/LICENSE)
+[![GitHub License Badge](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](https://github.com/victoriamcn/CLI-Weather/blob/main/LICENSE)
 
 ## Installation and Usage
 
 1. Clone this repository to your local computer.
-2. Open the repo in your preferred `IDE/Editor`. I use `VSCode`.
-3. Run `npm i`.
-4. In the command line, type a zipcode to see the weather for that area.
+2. Open the repo and the terminal within your preferred `IDE/Editor`. I prefer `VSCode`.
+3. Run `npm i` in the terminal.
+4. Register with [`tomorrow.io`](https://app.tomorrow.io/signin?_gl=1*dxtskt*_ga*MTkxNDc5Mzk2LjE3MDY1NzY4NTY.*_ga_FYZPGBJRTX*MTcwNjU4MjkzNC4yLjEuMTcwNjU4Mjk0Mi4wLjAuMA..&return_to=%2Fdevelopment%2Fkeys) to get your private `API key.`
+5. Create a `.env` file with the following variable:
+    ```
+    TOMORROW_IO_API_KEY = 'YOUR_KEY_HERE'
+    ```
 
 ## Demo
 
